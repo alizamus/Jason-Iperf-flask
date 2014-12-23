@@ -47,7 +47,7 @@ def show_entries():
     myrows = g.db.execute("select * from test")
     for row in myrows:
 	print row
-    entries = [dict(title=str(row[0]), text=str(row[1]), text1=str(row[2]) ) for row in cur.fetchall()]
+    entries = [dict(title=str(row[0]), text1=str(row[1]), text2=str(row[2]), text3=str(row[3]), text4=str(row[4]), text5=str(row[5]), text6=str(row[6]) ) for row in cur.fetchall()]
     return render_template('show_entries.html', entries=entries)
     #entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     #return (str(row))
