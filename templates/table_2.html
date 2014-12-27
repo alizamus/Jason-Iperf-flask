@@ -31,52 +31,96 @@ table#t01 th	{
 {% for entry in entries %}
 <table id="t01">
   <tr>
-    <th>ID</th>
-    <th>start_connected_socket</th>
-    <th>start_connected_local_host</th>
-    <th>start_connected_local_port</th>
-    <th>start_connected_remote_host</th>
-    <th>start_connected_remote_port</th>
-    <th>start_version</th>
-    <th>start_system_info</th>
-    <th>start_timestamp_time</th>
-    <th>start_timestamp_timesecs</th>
-    <th>start_connectin_to_host</th>
-    <th>start_connectin_to_port</th>
-    <th>start_cookie</th>
-    <th>start_tcp_mss_default</th>
-    <th>start_test_start_protocol</th>
-    <th>start_test_start_num_streams</th>
-    <th>start_test_start_blksize</th>
-    <th>start_test_start_omit</th>
-    <th>start_test_start_duration</th>
-    <th>start_test_start_bytes</th>
-    <th>start_test_start_blocks</th>
-    <th>start_test_start_reverse</th>
+    <th>Field in Json output</th>
+    <th>Corresponding number</th>
   </tr>
   <tr>
+    <td>ID</td>
     <td>{{ entry.title }}</td>
+  </tr>
+  <tr>
+    <td>start_connected_local_host</td>
     <td>{{ entry.text1|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connected_local_host</td>
     <td>{{ entry.text2|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connected_local_port</td>
     <td>{{ entry.text3|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connected_remote_host</td>
     <td>{{ entry.text4|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connected_remote_port</td>
     <td>{{ entry.text5|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_version</td>
     <td>{{ entry.text6|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_system_info</td>
     <td>{{ entry.text7|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_timestamp_time</td>
     <td>{{ entry.text8|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_timestamp_timesecs</td>
     <td>{{ entry.text9|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connectin_to_host</td>
     <td>{{ entry.text10|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_connectin_to_port</td>
     <td>{{ entry.text11|safe }}</td>
+  </tr>
+  <tr>
+    <td>start_cookie</td>
     <td>{{ entry.text12|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_tcp_mss_default</td>
     <td>{{ entry.text13|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_protocol</td>
     <td>{{ entry.text14|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_num_streams</td>
     <td>{{ entry.text15|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_blksize</td>
     <td>{{ entry.text16|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_omit</td>
     <td>{{ entry.text17|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_duration</td>
     <td>{{ entry.text18|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_bytes</td>
     <td>{{ entry.text19|safe }}</td>
+  </tr>	
+  <tr>
+    <td>start_test_start_blocks</td>
     <td>{{ entry.text20|safe }}</td>
-    <td>{{ entry.text21|safe }}</td>		
+  </tr>	
+  <tr>
+    <td>start_test_start_reverse</td>
+    <td>{{ entry.text21|safe }}</td>	
 </table>
 {% endfor %}
 </body>
