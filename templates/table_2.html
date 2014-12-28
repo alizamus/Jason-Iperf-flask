@@ -35,10 +35,6 @@ table#t01 th	{
     <th>Corresponding number</th>
   </tr>
   <tr>
-    <td>ID</td>
-    <td>{{ entry.title }}</td>
-  </tr>
-  <tr>
     <td>start_connected_local_host</td>
     <td>{{ entry.text1|safe }}</td>
   </tr>
@@ -120,7 +116,142 @@ table#t01 th	{
   </tr>	
   <tr>
     <td>start_test_start_reverse</td>
-    <td>{{ entry.text21|safe }}</td>	
+    <td>{{ entry.text21|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_streams_sender_socket</td>
+    <td>{{ entry.text22|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_start</td>
+    <td>{{ entry.text23|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_end</td>
+    <td>{{ entry.text24|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_seconds</td>
+    <td>{{ entry.text25|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_bytes</td>
+    <td>{{ entry.text26|safe }}</td>
+  </tr>		
+  <tr>
+    <td>end_streams_sender_bits_per_second</td>
+    <td>{{ entry.text27|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_retrasmits</td>
+    <td>{{ entry.text28|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_max_snd_cwnd</td>
+    <td>{{ entry.text29|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_sender_max_rtt</td>
+    <td>{{ entry.text30|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_streams_sender_min_rtt</td>
+    <td>{{ entry.text31|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_streams_sender_mean_rtt</td>
+    <td>{{ entry.text32|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_streams_receiver_socket</td>
+    <td>{{ entry.text33|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_receiver_start</td>
+    <td>{{ entry.text34|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_receiver_end</td>
+    <td>{{ entry.text35|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_receiver_seconds</td>
+    <td>{{ entry.text36|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_streams_receiver_bytes</td>
+    <td>{{ entry.text37|safe }}</td>
+  </tr>		
+  <tr>
+    <td>end_streams_receiver_bits_per_second</td>
+    <td>{{ entry.text38|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_sum_sent_start</td>
+    <td>{{ entry.text39|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_sum_sent_end</td>
+    <td>{{ entry.text40|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_sum_sent_seconds</td>
+    <td>{{ entry.text41|safe }}</td>
+  </tr>	  
+  <tr>
+    <td>end_sum_sent_bytes</td>
+    <td>{{ entry.text42|safe }}</td>
+  </tr>	  
+  <tr>
+    <td>end_sum_sent_bits_per_second</td>
+    <td>{{ entry.text43|safe }}</td>
+  </tr>	  
+  <tr>
+    <td>end_sum_sent_retransmits</td>
+    <td>{{ entry.text44|safe }}</td>
+  </tr>
+    <td>end_sum_received_start</td>
+    <td>{{ entry.text45|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_sum_received_end</td>
+    <td>{{ entry.text46|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_sum_received_seconds</td>
+    <td>{{ entry.text47|safe }}</td>
+  </tr>	  
+  <tr>
+    <td>end_sum_received_bytes</td>
+    <td>{{ entry.text48|safe }}</td>
+  </tr>	  
+  <tr>
+    <td>end_sum_received_bits_per_second</td>
+    <td>{{ entry.text49|safe }}</td>
+  </tr>
+  <tr>
+    <td>end_cpu_utilization_percent_host_total</td>
+    <td>{{ entry.text50|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_cpu_utilization_percent_host_user</td>
+    <td>{{ entry.text51|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_cpu_utilization_percent_host_system</td>
+    <td>{{ entry.text52|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_cpu_utilization_percent_remote_total</td>
+    <td>{{ entry.text53|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_cpu_utilization_percent_remote_user</td>
+    <td>{{ entry.text54|safe }}</td>
+  </tr>	
+  <tr>
+    <td>end_cpu_utilization_percent_remote_system</td>
+    <td>{{ entry.text55|safe }}</td>				
 </table>
 {% endfor %}
 </body>

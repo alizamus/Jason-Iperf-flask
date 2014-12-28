@@ -31,7 +31,6 @@ table#t01 th	{
 {% for entry in entries %}
 <table id="t01">
   <tr>
-    <th>ID</th>
     <th>start_connected_socket</th>
     <th>start_connected_local_host</th>
     <th>start_connected_local_port</th>
@@ -53,9 +52,42 @@ table#t01 th	{
     <th>start_test_start_bytes</th>
     <th>start_test_start_blocks</th>
     <th>start_test_start_reverse</th>
+    <th>end_streams_sender_socket</th>
+    <th>end_streams_sender_start</th>
+    <th>end_streams_sender_end</th>
+    <th>end_streams_sender_seconds</th>
+    <th>end_streams_sender_bytes</th>
+    <th>end_streams_sender_bits_per_second</th>
+    <th>end_streams_sender_retrasmits</th>
+    <th>end_streams_sender_max_snd_cwnd</th>
+    <th>end_streams_sender_max_rtt</th>
+    <th>end_streams_sender_min_rtt</th>
+    <th>end_streams_sender_mean_rtt</th>
+    <th>end_streams_sender_receiver_socket</th>
+    <th>end_streams_sender_receiver_start</th>
+    <th>end_streams_sender_receiver_end</th>
+    <th>end_streams_sender_receiver_seconds</th>
+    <th>end_streams_sender_receiver_bytes</th>
+    <th>end_streams_sender_receiver_bits_per_second</th>
+    <th>end_sum_sent_start</th>
+    <th>end_sum_sent_end</th>
+    <th>end_sum_sent_seconds</th>
+    <th>end_sum_sent_bytes</th>
+    <th>end_sum_sent_bits_per_second</th>
+    <th>end_sum_sent_retransmits</th>
+    <th>end_sum_received_start</th>
+    <th>end_sum_received_end</th>
+    <th>end_sum_received_seconds</th>
+    <th>end_sum_received_bytes</th>
+    <th>end_sum_received_bits_per_second</th>
+    <th>end_cpu_utilization_percent_host_total</th>
+    <th>end_cpu_utilization_percent_host_user</th>
+    <th>end_cpu_utilization_percent_host_system</th>
+    <th>end_cpu_utilization_percent_remote_total</th>
+    <th>end_cpu_utilization_percent_remote_user</th>
+    <th>end_cpu_utilization_percent_remote_system</th>
   </tr>
   <tr>
-    <td>{{ entry.title }}</td>
     <td>{{ entry.text1|safe }}</td>
     <td>{{ entry.text2|safe }}</td>
     <td>{{ entry.text3|safe }}</td>
@@ -76,7 +108,41 @@ table#t01 th	{
     <td>{{ entry.text18|safe }}</td>
     <td>{{ entry.text19|safe }}</td>
     <td>{{ entry.text20|safe }}</td>
-    <td>{{ entry.text21|safe }}</td>		
+    <td>{{ entry.text21|safe }}</td>
+    <td>{{ entry.text22|safe }}</td>
+    <td>{{ entry.text23|safe }}</td>
+    <td>{{ entry.text24|safe }}</td>
+    <td>{{ entry.text25|safe }}</td>
+    <td>{{ entry.text26|safe }}</td>
+    <td>{{ entry.text27|safe }}</td>
+    <td>{{ entry.text28|safe }}</td>
+    <td>{{ entry.text29|safe }}</td>
+    <td>{{ entry.text30|safe }}</td>
+    <td>{{ entry.text31|safe }}</td>
+    <td>{{ entry.text32|safe }}</td>
+    <td>{{ entry.text33|safe }}</td>
+    <td>{{ entry.text34|safe }}</td>
+    <td>{{ entry.text35|safe }}</td>
+    <td>{{ entry.text36|safe }}</td>
+    <td>{{ entry.text37|safe }}</td>
+    <td>{{ entry.text38|safe }}</td>
+    <td>{{ entry.text39|safe }}</td>
+    <td>{{ entry.text40|safe }}</td>
+    <td>{{ entry.text41|safe }}</td>
+    <td>{{ entry.text42|safe }}</td>
+    <td>{{ entry.text43|safe }}</td>
+    <td>{{ entry.text44|safe }}</td>
+    <td>{{ entry.text45|safe }}</td>
+    <td>{{ entry.text46|safe }}</td>
+    <td>{{ entry.text47|safe }}</td>
+    <td>{{ entry.text48|safe }}</td>
+    <td>{{ entry.text49|safe }}</td>
+    <td>{{ entry.text50|safe }}</td>
+    <td>{{ entry.text51|safe }}</td>
+    <td>{{ entry.text52|safe }}</td>
+    <td>{{ entry.text53|safe }}</td>
+    <td>{{ entry.text54|safe }}</td>
+    <td>{{ entry.text55|safe }}</td>		
 </table>
 {% endfor %}
 </body>
