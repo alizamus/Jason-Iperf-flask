@@ -31,6 +31,7 @@ table#t01 th	{
 {% for entry in entries %}
 <table id="t01">
   <tr>
+    <th>time_of_update</th>
     <th>start_connected_socket</th>
     <th>start_connected_local_host</th>
     <th>start_connected_local_port</th>
@@ -88,6 +89,7 @@ table#t01 th	{
     <th>end_cpu_utilization_percent_remote_system</th>
   </tr>
   <tr>
+    <td>{{ entry.current_date_time |safe }}</td>
     <td>{{ entry.text1|safe }}</td>
     <td>{{ entry.text2|safe }}</td>
     <td>{{ entry.text3|safe }}</td>

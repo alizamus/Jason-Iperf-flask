@@ -35,6 +35,10 @@ table#t01 th	{
     <th>Corresponding number</th>
   </tr>
   <tr>
+    <td>time_of_update</td>
+    <td>{{ entry.current_date_time |safe }}</td>
+  </tr>
+  <tr>
     <td>start_connected_local_host</td>
     <td>{{ entry.text1|safe }}</td>
   </tr>
