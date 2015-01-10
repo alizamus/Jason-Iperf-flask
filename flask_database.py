@@ -3,7 +3,7 @@ from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 
 
-DATABASE = '/home/ali/simple/example.db'
+DATABASE = '/home/ubuntu/Json-Iperf-flask/example.db'
 DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'admin'
@@ -63,4 +63,4 @@ def test_entries2():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

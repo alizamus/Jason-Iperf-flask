@@ -1,23 +1,21 @@
 import sqlite3
 import json
-from pprint import pprint
 from sys import argv
 from datetime import datetime
 
 script , todo = argv
 
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('/home/ubuntu/Json-Iperf-flask/example.db')
 
 c = conn.cursor()
 
-with open('test') as data_file:    
+with open('/home/ubuntu/Json-Iperf-flask/test') as data_file:    
     data = json.load(data_file)
 
 if todo == 'create':
 	c.execute("CREATE TABLE test (id integer, start_connected_socket integer, start_connected_local_host string, start_connected_local_port integer, start_connected_remote_host string, start_connected_remote_port integer, start_version string, start_system_info string, start_timestamp_time string, start_timestamp_timesecs integer, start_connecting_to_host string, start_connecting_to_port integer, start_cookie string, start_tcp_mss_default string, start_test_start_protocol string, start_test_start_num_streams integer, start_test_start_blksize integer, start_test_start_omit integer, start_test_start_duration integer, start_test_start_bytes integer, start_test_start_blocks integer, start_test_start_reverse integer, end_streams_sender_socket integer, end_streams_sender_start integer, end_streams_sender_end integer, end_streams_sender_seconds integer, end_streams_sender_bytes integer, end_streams_sender_bits_per_second integer, end_streams_sender_retrasmits integer, end_streams_sender_max_snd_cwnd integer, end_streams_sender_max_rtt integer, end_streams_sender_min_rtt integer, end_streams_sender_mean_rtt integer, end_streams_receiver_socket integer, end_streams_receiver_start integer, end_streams_receiver_end integer, end_streams_receiver_seconds integer, end_streams_receiver_bytes integer, end_streams_receiver_bits_per_second integer, end_sum_sent_start integer, end_sum_sent_end integer, end_sum_sent_seconds integer, end_sum_sent_bytes integer, end_sum_sent_bits_per_second integer, end_sum_sent_retransmits integer, end_sum_received_start integer, end_sum_received_end integer, end_sum_received_seconds integer, end_sum_received_bytes integer, end_sum_received_bits_per_second integer,end_cpu_utilization_percent_host_total integer, end_cpu_utilization_percent_host_user integer, end_cpu_utilization_percent_host_system integer,end_cpu_utilization_percent_remote_total integer, end_cpu_utilization_percent_remote_user integer, end_cpu_utilization_percent_remote_system integer, current_date_time string )")
 elif todo == 'add':
 	date_time = str(datetime.now())
-	print (date_time)
 	c.execute("DELETE FROM test WHERE id = 1")
 	c.execute('insert into test (id, start_connected_socket, start_connected_local_host, start_connected_local_port, start_connected_remote_host, start_connected_remote_port, start_version, start_system_info, start_timestamp_time, start_timestamp_timesecs, start_connecting_to_host, start_connecting_to_port, start_cookie, start_tcp_mss_default, start_test_start_protocol, start_test_start_num_streams, start_test_start_blksize, start_test_start_omit, start_test_start_duration, start_test_start_bytes, start_test_start_blocks, start_test_start_reverse, end_streams_sender_socket, end_streams_sender_start, end_streams_sender_end, end_streams_sender_seconds, end_streams_sender_bytes, end_streams_sender_bits_per_second, end_streams_sender_retrasmits, end_streams_sender_max_snd_cwnd, end_streams_sender_max_rtt, end_streams_sender_min_rtt, end_streams_sender_mean_rtt, end_streams_receiver_socket, end_streams_receiver_start, end_streams_receiver_end, end_streams_receiver_seconds, end_streams_receiver_bytes, end_streams_receiver_bits_per_second, end_sum_sent_start, end_sum_sent_end, end_sum_sent_seconds, end_sum_sent_bytes, end_sum_sent_bits_per_second, end_sum_sent_retransmits, end_sum_received_start, end_sum_received_end, end_sum_received_seconds, end_sum_received_bytes, end_sum_received_bits_per_second, end_cpu_utilization_percent_host_total, end_cpu_utilization_percent_host_user, end_cpu_utilization_percent_host_system, end_cpu_utilization_percent_remote_total, end_cpu_utilization_percent_remote_user, end_cpu_utilization_percent_remote_system, current_date_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			(1, 
@@ -78,17 +76,8 @@ elif todo == 'add':
 			data['end']['cpu_utilization_percent']['remote_system'],
 			date_time))
 
-	myrows = c.execute("select * from test")
+	
 
-	for row in myrows:
-		print row
-
-else:
-	print "================================="
-	print "you can use one of these methodes"
-	print "1. python database.py create ----> in order to create database"
-	print "2. python database.py add    ----> in order to add your data from Json text file to database"
-	print "================================="
 
 conn.commit()
  
